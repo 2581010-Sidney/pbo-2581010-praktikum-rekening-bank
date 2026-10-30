@@ -10,12 +10,12 @@ public class BankMini {
             System.out.println();
             System.out.println("=== BANK MINI ===");
             System.out.println("1. Setor | 2. Tarik | 3. Info | 0. Keluar");
-            System.out.println("Pilihan menu: ");
+            System.out.print("Pilihan menu: ");
             pilihan = input.nextInt();
 
             switch (pilihan) {
                 case 1:
-                    System.out.println("Jumlah setor: ");
+                    System.out.print("Jumlah setor: ");
                     int setor = input.nextInt();
                     if (rekening.setor(setor)) {
                         System.out.println("Setor berhasil.");
@@ -24,7 +24,7 @@ public class BankMini {
                     }
                     break;
                 case 2:
-                    System.out.println("Jumlah ditarik: ");
+                    System.out.print("Jumlah ditarik: ");
                     int tarik = input.nextInt();
                     if (rekening.tarik(tarik)) {
                         System.out.println("Tarik berhasil.");
@@ -43,6 +43,8 @@ public class BankMini {
             }
         }  while (pilihan != 0);
 
-
+        System.out.println();
+        System.out.println("Saldo akhir");
+        rekening.cetakInfo();
     }
 }
