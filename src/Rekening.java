@@ -9,6 +9,13 @@ public class Rekening {
         this.saldo = saldo;
     }
 
+    public String getNomor(){
+        return nomor;
+    }
+
+    public String getPemilik(){
+        return pemilik;
+    }
     public int getSaldo(){ //diluar class, data ga bisa diubah langsung, hanya bisa lewat setor dan tarik.
         return saldo;
     }

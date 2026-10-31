@@ -5,12 +5,17 @@ public class BankMini {
         Scanner input = new Scanner(System.in);
         Rekening rekening = new Rekening("001","Ani", 100000);
 
+        //bukti encapsulation: baris bawah tidak bisa di compile
+        //rekening.saldo=100000;
+        //pesan error: java: saldo has private access in Rekening;
+
+        System.out.println("============ BANK MINI ============");
+        System.out.println("Rekening " + rekening.getNomor() + " a.n " + rekening.getPemilik());
+
+
         int pilihan;
         do {
-            System.out.println();
-            System.out.println("=== BANK MINI ===");
-            System.out.println("1. Setor | 2. Tarik | 3. Info | 0. Keluar");
-            System.out.print("Pilihan menu: ");
+            System.out.print("Menu (1 Setor, 2 Tarik, 3 Info, 0 Keluar): ");
             pilihan = input.nextInt();
 
             switch (pilihan) {
@@ -44,7 +49,7 @@ public class BankMini {
         }  while (pilihan != 0);
 
         System.out.println();
-        System.out.println("Saldo akhir");
+        System.out.println("============ Saldo akhir ============");
         rekening.cetakInfo();
     }
 }
